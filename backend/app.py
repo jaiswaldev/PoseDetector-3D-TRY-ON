@@ -12,7 +12,7 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port = 8000)
 
 
 # from flask import Flask, request, jsonify, render_template, Response
