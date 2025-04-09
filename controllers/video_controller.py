@@ -3,7 +3,7 @@ import numpy as np
 import base64
 import mediapipe as mp
 from utils.logging_config import logger
-
+# dev
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(static_image_mode=False, min_detection_confidence=0.5, model_complexity=2)
 
