@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.venv
+
+# Environment variables and secrets
+.env
+*.secret
+config.json
+secrets.json
+
+# Dependencies
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Python cache
+*.sqlite3
+db.sqlite3
+instance/
+*.db
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+nohup.out
+
+# Compiled C extensions
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MediaPipe model cache (if used)
+mediapipe_models/
