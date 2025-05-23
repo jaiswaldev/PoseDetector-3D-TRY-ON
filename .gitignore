@@ -3,48 +3,96 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
 # Virtual environment
-.venv/
 venv/
 env/
-*.venv
+ENV/
+.venv/
+.pipenv/
+pip-wheel-metadata/
 
-# Environment variables and secrets
-.env
-*.secret
-config.json
-secrets.json
+# PyInstaller
+*.manifest
+*.spec
 
-# Dependencies
-*.log
+# Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Python cache
-*.sqlite3
-db.sqlite3
-instance/
-*.db
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
 
-# IDE / Editor Files
+# Pyre type checker
+.pyre/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pydantic cache
+.pydantic_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VSCode
 .vscode/
+
+# PyCharm
 .idea/
-*.iml
 
 # System files
 .DS_Store
 Thumbs.db
 
-# Logs
-logs/
+# FastAPI specific (e.g., generated files, logs)
 *.log
-nohup.out
+*.sqlite3
+*.db
+*.pem
 
-# Compiled C extensions
-*.so
+# Uvicorn
+uvicorn.log
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+# Local Docker files (if using Docker)
+*.env
+.env.*
+docker-compose.override.yml
+__docker_volume_*/
 
-# MediaPipe model cache (if used)
-mediapipe_models/
+# Optional: Ignore static/media folders (if dynamically generated)
+static/
+media/
