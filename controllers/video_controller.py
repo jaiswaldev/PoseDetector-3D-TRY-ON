@@ -41,6 +41,7 @@ async def generate_frames():
                 for id, lm in enumerate(results.pose_landmarks.landmark):
                     h, w, c = frame.shape
                     print(id, lm)
+                
                     cx, cy = int(lm.x * w), int(lm.y * h)
                     cv2.putText(frame, str(id), (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
