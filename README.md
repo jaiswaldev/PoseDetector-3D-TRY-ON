@@ -30,17 +30,19 @@ A full-stack web application for **real-time human pose detection** using **Open
 
 ### 🔹 Backend (FastAPI + OpenCV + MediaPipe)
 ```bash
-git clone https://github.com/your-username/pose-detection-app.git
-cd pose-detection-app/backend
+git clone https://github.com/jaiswaldev/PoseDetector-3D-TRY-ON.git
+cd PoseDetector-3D-TRY-ON/backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 
 
-### 🔹 Frontend (React + Vite)
+🔹 Frontend (React + Vite)
 ```bash
 cd ../frontend
 npm install
 npm run dev
 
+
+##
 **Make sure the backend is running before starting the frontend.**
 
