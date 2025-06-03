@@ -22,7 +22,7 @@ A full-stack web application for **real-time human pose detection** using **Open
 ## 🎯 Features
 
 - ✅ Real-time pose detection with **33 human body landmarks**
-- 🚀 **MJPEG video streaming** with sub-100ms latency
+- 🚀 **MJPEG video streaming** with <100ms latency
 - 🎥 Smooth performance: **15–25 FPS** on standard consumer hardware
 - ⚙️ **Modular API** design — ready for multi-user support or activity recognition
 - 📱 Lightweight, responsive UI built with **React + TailwindCSS**
