@@ -9,7 +9,7 @@ async def generate_frames():
     mp_pose = mp.solutions.pose
     mp_drawing = mp.solutions.drawing_utils
     # mp_drawing_styles = mp.solutions.drawing_styles
-    pose = mp_pose.Pose()
+    pose = mp_pose.Pose(model_complexity=0)
 
     try:
         if state.camera is None or not state.camera.isOpened():
@@ -26,8 +26,12 @@ async def generate_frames():
                 break
 
             frame = cv2.flip(frame, 1)
+            frame = cv2.resize(frame, (320, 240))
             image_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+           
             results = pose.process(image_rgb)
+
 
             # print(results.pose_landmarks)
 
@@ -35,7 +39,7 @@ async def generate_frames():
                 mp_drawing.draw_landmarks(
                     frame,
                     results.pose_landmarks,
-                    mp_pose.POSE_CONNECTIONS,
+                    # mp_pose.POSE_CONNECTIONS,
                     # mp_drawing_styles.get_default_pose_landmarks_style()
                 )
                 for id, lm in enumerate(results.pose_landmarks.landmark):
@@ -43,7 +47,7 @@ async def generate_frames():
                     print(id, lm)
                 
                     cx, cy = int(lm.x * w), int(lm.y * h)
-                    cv2.putText(frame, str(id), (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                    # cv2.putText(frame, str(id), (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
             cTime = time.time()
             fps = 1 / (cTime - state.prevTime)
