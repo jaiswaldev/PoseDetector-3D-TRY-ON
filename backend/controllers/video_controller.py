@@ -9,7 +9,7 @@ async def generate_frames():
     mp_pose = mp.solutions.pose
     mp_drawing = mp.solutions.drawing_utils
     # mp_drawing_styles = mp.solutions.drawing_styles
-    pose = mp_pose.Pose(model_complexity=0)
+    pose = mp_pose.Pose()
 
     try:
         if state.camera is None or not state.camera.isOpened():
